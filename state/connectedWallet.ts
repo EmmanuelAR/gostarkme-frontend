@@ -1,7 +1,7 @@
 import { ARGENT_WEBWALLET_URL, CHAIN_ID, provider } from "@/constants";
 import { atomWithStorage } from "jotai/utils";
-import type { StarknetWindowObject } from "starknetkit";
 import { connect } from "starknetkit";
+import type { StarknetWindowObject } from "starknetkit";
 
 export const walletStarknetkitLatestAtom = atomWithStorage<
 	undefined | null | StarknetWindowObject
