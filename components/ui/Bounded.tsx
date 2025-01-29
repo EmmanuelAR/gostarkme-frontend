@@ -18,7 +18,7 @@ const Bounded = ({ children, className }: BoundedProps) => {
         navItems={navItems}
       />
       <main
-        className={`flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-6 bg-gray-50 shadow-md rounded-lg ${className}`}
+        className={`flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-6  rounded-lg ${className}`} // bg-gray-50 shadow-md
       >
         {children}
       </main>
