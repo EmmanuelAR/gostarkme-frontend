@@ -109,8 +109,9 @@ export const FundVote = ({ name, upVotes, upVotesNeeded, addr, voted, setLoading
             <button
               onClick={handleVoteClick}
               disabled={isVoting || (chainId !== CHAIN_ID && chainId != BRAAVOS_CHAIN_ID)}
-              className={`bg-darkblue text-white px-12 py-2 text-xl rounded-md shadow-md hover:bg-starkorange
-              active:bg-darkblue ease-in-out duration-500 ${
+              className={`self-center bg-darkblue text-white py-3 px-10 md:py-3 md:px-10
+          text-xs md:text-sm shadow-xl hover:bg-starkorange active:bg-darkblue ease-in-out
+          duration-500 active:duration-0 shadow-gray-400  ${
                 chainId !== CHAIN_ID && chainId != BRAAVOS_CHAIN_ID ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
