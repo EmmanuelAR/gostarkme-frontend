@@ -51,6 +51,24 @@ export const fundAbi = [
     ]
   },
   {
+    "type": "struct",
+    "name": "gostarkme::fund::DonatorInfo",
+    "members": [
+      {
+        "name": "donator_index",
+        "type": "core::integer::u256"
+      },
+      {
+        "name": "donator_address",
+        "type": "core::starknet::contract_address::ContractAddress"
+      },
+      {
+        "name": "donator_amount",
+        "type": "core::integer::u256"
+      }
+    ]
+  },
+  {
     "type": "interface",
     "name": "gostarkme::fund::IFund",
     "items": [
@@ -134,6 +152,17 @@ export const fundAbi = [
         "outputs": [
           {
             "type": "core::byte_array::ByteArray"
+          }
+        ],
+        "state_mutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "get_donators",
+        "inputs": [],
+        "outputs": [
+          {
+            "type": "core::array::Array::<gostarkme::fund::DonatorInfo>"
           }
         ],
         "state_mutability": "view"
@@ -313,6 +342,22 @@ export const fundAbi = [
         "outputs": [
           {
             "type": "core::integer::u8"
+          }
+        ],
+        "state_mutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "get_single_donator_by_address",
+        "inputs": [
+          {
+            "name": "donator",
+            "type": "core::starknet::contract_address::ContractAddress"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "gostarkme::fund::DonatorInfo"
           }
         ],
         "state_mutability": "view"

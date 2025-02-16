@@ -1,12 +1,12 @@
 export const fundManager = [
   {
-    "name": "FundManagerImpl",
     "type": "impl",
+    "name": "FundManagerImpl",
     "interface_name": "gostarkme::fund_manager::IFundManager"
   },
   {
-    "name": "core::byte_array::ByteArray",
     "type": "struct",
+    "name": "core::byte_array::ByteArray",
     "members": [
       {
         "name": "data",
@@ -23,8 +23,8 @@ export const fundManager = [
     ]
   },
   {
-    "name": "core::integer::u256",
     "type": "struct",
+    "name": "core::integer::u256",
     "members": [
       {
         "name": "low",
@@ -37,12 +37,12 @@ export const fundManager = [
     ]
   },
   {
-    "name": "gostarkme::fund_manager::IFundManager",
     "type": "interface",
+    "name": "gostarkme::fund_manager::IFundManager",
     "items": [
       {
-        "name": "new_fund",
         "type": "function",
+        "name": "new_fund",
         "inputs": [
           {
             "name": "name",
@@ -73,8 +73,8 @@ export const fundManager = [
         "state_mutability": "external"
       },
       {
-        "name": "get_current_id",
         "type": "function",
+        "name": "get_current_id",
         "inputs": [],
         "outputs": [
           {
@@ -84,8 +84,8 @@ export const fundManager = [
         "state_mutability": "view"
       },
       {
-        "name": "get_fund",
         "type": "function",
+        "name": "get_fund",
         "inputs": [
           {
             "name": "id",
@@ -100,8 +100,8 @@ export const fundManager = [
         "state_mutability": "view"
       },
       {
-        "name": "get_owner",
         "type": "function",
+        "name": "get_owner",
         "inputs": [],
         "outputs": [
           {
@@ -111,8 +111,8 @@ export const fundManager = [
         "state_mutability": "view"
       },
       {
-        "name": "get_fund_class_hash",
         "type": "function",
+        "name": "get_fund_class_hash",
         "inputs": [],
         "outputs": [
           {
@@ -124,8 +124,8 @@ export const fundManager = [
     ]
   },
   {
-    "name": "constructor",
     "type": "constructor",
+    "name": "constructor",
     "inputs": [
       {
         "name": "fund_class_hash",
@@ -134,36 +134,36 @@ export const fundManager = [
     ]
   },
   {
-    "kind": "struct",
-    "name": "gostarkme::fund_manager::FundManager::FundDeployed",
     "type": "event",
+    "name": "gostarkme::fund_manager::FundManager::FundDeployed",
+    "kind": "struct",
     "members": [
       {
-        "kind": "key",
         "name": "owner",
-        "type": "core::starknet::contract_address::ContractAddress"
+        "type": "core::starknet::contract_address::ContractAddress",
+        "kind": "key"
       },
       {
-        "kind": "data",
         "name": "fund_address",
-        "type": "core::starknet::contract_address::ContractAddress"
+        "type": "core::starknet::contract_address::ContractAddress",
+        "kind": "data"
       },
       {
-        "kind": "data",
         "name": "fund_id",
-        "type": "core::integer::u128"
+        "type": "core::integer::u128",
+        "kind": "data"
       }
     ]
   },
   {
-    "kind": "enum",
-    "name": "gostarkme::fund_manager::FundManager::Event",
     "type": "event",
+    "name": "gostarkme::fund_manager::FundManager::Event",
+    "kind": "enum",
     "variants": [
       {
-        "kind": "nested",
         "name": "FundDeployed",
-        "type": "gostarkme::fund_manager::FundManager::FundDeployed"
+        "type": "gostarkme::fund_manager::FundManager::FundDeployed",
+        "kind": "nested"
       }
     ]
   }

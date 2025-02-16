@@ -55,7 +55,6 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
-    console.log(navItems);
     getFunds();
   }, []);
 
